@@ -9,7 +9,7 @@ In this update, I focused on structuring the game's technical foundation by crea
 
 ## February, 05th, 2026
 
-### PLayer moviment and coin collection
+### Player moviment and coin collection
 
 Scripts were created for player movement and coin collection was tested along a simple path.
 
