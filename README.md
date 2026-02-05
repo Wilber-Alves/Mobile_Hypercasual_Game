@@ -11,6 +11,6 @@ In this update, I focused on structuring the game's technical foundation by crea
 
 ### PLayer moviment and coin collection
 
-Scripts were created for player movement and coin collection was tested along a simple path.!
+Scripts were created for player movement and coin collection was tested along a simple path.
 
-[Movie_002](https://github.com/user-attachments/assets/93705a8a-0e6a-4539-b7b3-cf68855e4283)
+ <img src="https://github.com/user-attachments/assets/93705a8a-0e6a-4539-b7b3-cf68855e4283" width="100" title="player collecting coins"/>
