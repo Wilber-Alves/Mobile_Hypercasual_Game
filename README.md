@@ -14,3 +14,12 @@ In this update, I focused on structuring the game's technical foundation by crea
 Scripts were created for player movement and coin collection was tested along a simple path. Implementation of player movement and coin collection system. Level 1 was updated with new materials, obstacles, and the creation of prefabs for optimization. Additionally, I performed an organizational restructuring of the project, including the creation of configuration folders, relocation of scripts, and updating of .meta files.
 
  <img src="https://github.com/user-attachments/assets/93705a8a-0e6a-4539-b7b3-cf68855e4283" width="100" title="player collecting coins"/>
+
+ ## February, 06th, 2026
+
+### Level design for test 
+
+The level design for the first stage was simple and tested to identify coin collection and obstacles. Wall collisions still need to be added.
+
+<img src="https://github.com/user-attachments/assets/4d55cb27-1d49-4e18-aba7-de07e9e0a67a" width="100" title="Level design"/>
+
