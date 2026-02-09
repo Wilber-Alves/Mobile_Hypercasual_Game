@@ -23,3 +23,8 @@ The level design for the first stage was simple and tested to identify coin coll
 
 <img src="https://github.com/user-attachments/assets/4d55cb27-1d49-4e18-aba7-de07e9e0a67a" width="100" title="Level design"/>
 
+## February, 09th, 2026
+
+### StartScreen UI e assets inclusion 
+
+Inclusion of the game's start screen and inclusion of the textmesh pro assets.
