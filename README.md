@@ -27,4 +27,4 @@ The level design for the first stage was simple and tested to identify coin coll
 
 ### StartScreen UI e assets inclusion 
 
-Inclusion of the game's start screen and inclusion of the textmesh pro assets.
+Inclusion of the game's start screen and inclusion of the textmesh pro assets. Adjustments to the scene and modifications to the player controller. The game now has a prefab finish line, and the UI already includes play and restart buttons, making it a functional prototype.
