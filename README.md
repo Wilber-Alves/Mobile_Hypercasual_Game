@@ -38,3 +38,5 @@ Inclusion of the game's start screen and inclusion of the textmesh pro assets. A
 
 This update includes modifications to the Coin prefab and enhancements to the item animation scripts for better 3D performance. Significant architectural changes were made to the itemcollectableBase to support inheritance for PowerUp items, which now feature a dedicated base script, a custom pill-shaped prefab, and new materials for improved visual consistency.
 
+<img src="https://github.com/user-attachments/assets/4ee58ba4-a430-4b29-a36c-48776e2c78cd" width="100" title="Coin and Pill prefabs with VFX"/>
+<img src="https://github.com/user-attachments/assets/23d583ab-965d-4de4-bc5b-3c3d23fc42e4" width="180" title="Pill prefab"/>
