@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerController : MonoBehaviour
 {   
@@ -10,17 +12,22 @@ public class PlayerController : MonoBehaviour
     public float speed = 1.0f;
 
     public string tagToCheckObstacle = "Obstacle";
+    public string tagToCheckFinishLine = "FinishLine";
 
+    public GameObject endScreen;
+    
     // privates
-    private bool _canrun;
     private Vector3 _position;
+    private bool _canRun;
+
+
     private void Start()
     {
-        _canrun = true;
+    
     }
     void Update()
     {
-        if (!_canrun) return;
+        if (!_canRun) return;
 
         _position = transform.position;
         _position.y = transform.position.y;
@@ -32,12 +39,30 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.transform.tag == "Obstacle")
+        if (collision.transform.tag == tagToCheckObstacle)
         {
-            _canrun = false;
-            Debug.Log("Game Over!");
-
+            EndGame();
         }
+        
+        if (collision.transform.tag == tagToCheckFinishLine)
+        {
+            EndGame();
+        }
+
+    }
+
+    private void EndGame()
+    {
+        _canRun = false;
+        endScreen.SetActive(true);
+        Debug.Log("Game Over!");
+
+    }
+
+    public void StartToRun()
+    {
+        _canRun = true; 
+
     }
 
 }
