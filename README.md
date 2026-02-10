@@ -1,5 +1,5 @@
 # Mobile_Hypercasual_Game
-This project contains the exercises from modules 20 to 27 of EBAC for creating a hypercasual mobile game.
+This project contains the exercises from modules 20 to 27 of EBAC for creating a hypercasual mobile game for Android System.
 
 ## February, 04th, 2026
 
