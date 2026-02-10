@@ -1,5 +1,5 @@
 # Mobile_Hypercasual_Game
-This project contains the exercises from modules 20 to 27 of EBAC for creating a hypercasual mobile game.
+This project contains the exercises from modules 20 to 27 of EBAC for creating a hypercasual mobile game for Android System.
 
 ## February, 04th, 2026
 
@@ -28,3 +28,7 @@ The level design for the first stage was simple and tested to identify coin coll
 ### StartScreen UI e assets inclusion 
 
 Inclusion of the game's start screen and inclusion of the textmesh pro assets. Adjustments to the scene and modifications to the player controller. The game now has a prefab finish line, and the UI already includes play and restart buttons, making it a functional prototype.
+
+<img src="https://github.com/user-attachments/assets/c7c00ae8-0f79-49bc-8fad-657aeae4c429" width="100" title="Start screen and Obstacle bump"/>
+<img src="https://github.com/user-attachments/assets/1a998572-2635-429d-9dfb-5b4b9a787b53" width="100" title="Finish Line Prefab and restart Game Screen"/>
+
