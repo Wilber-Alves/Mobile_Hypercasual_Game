@@ -1,8 +1,10 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using EDGEE.Core.Singleton;
+using TMPro;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : Singleton<PlayerController>
 {   
     // publics
     [Header("Lerp")]
@@ -19,11 +21,14 @@ public class PlayerController : MonoBehaviour
     // privates
     private Vector3 _position;
     private bool _canRun;
-
+    private float _currentSpeed;
+    private Vector3 _startPosition;
 
     private void Start()
     {
-    
+        _startPosition = transform.position;
+        ResetSpeed();
+
     }
     void Update()
     {
@@ -34,7 +39,7 @@ public class PlayerController : MonoBehaviour
         _position.z = transform.position.z;
 
         transform.position = Vector3.Lerp(transform.position, _position, lerpSpeed * Time.deltaTime);
-        transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        transform.Translate(Vector3.forward * _currentSpeed * Time.deltaTime);
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -64,5 +69,18 @@ public class PlayerController : MonoBehaviour
         _canRun = true; 
 
     }
-
+    #region POWER UP
+    public void SetPowerUpText(string s)
+    {
+        //uiTextPowerUp.text = s;
+    }
+    public void PowerUpSpeedUp(float f)
+    {
+        _currentSpeed = f;
+    }
+    public void ResetSpeed()
+    {
+        _currentSpeed = speed;
+    }
+    #endregion
 }
