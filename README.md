@@ -32,3 +32,11 @@ Inclusion of the game's start screen and inclusion of the textmesh pro assets. A
 <img src="https://github.com/user-attachments/assets/c7c00ae8-0f79-49bc-8fad-657aeae4c429" width="100" title="Start screen and Obstacle bump"/>
 <img src="https://github.com/user-attachments/assets/1a998572-2635-429d-9dfb-5b4b9a787b53" width="100" title="Finish Line Prefab and restart Game Screen"/>
 
+## February, 10th, 2026
+
+### Refactoring Item Systems & PowerUp Implementation
+
+This update includes modifications to the Coin prefab and enhancements to the item animation scripts for better 3D performance. Significant architectural changes were made to the itemcollectableBase to support inheritance for PowerUp items, which now feature a dedicated base script, a custom pill-shaped prefab, and new materials for improved visual consistency.
+
+<img src="https://github.com/user-attachments/assets/4ee58ba4-a430-4b29-a36c-48776e2c78cd" width="100" title="Coin and Pill prefabs with VFX"/>
+<img src="https://github.com/user-attachments/assets/23d583ab-965d-4de4-bc5b-3c3d23fc42e4" width="180" title="Pill prefab"/>
