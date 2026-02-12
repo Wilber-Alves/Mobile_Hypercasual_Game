@@ -28,7 +28,7 @@
 
 ### StartScreen UI e assets inclusion 
 
-   Inclusion of the game's start screen and inclusion of the textmesh pro assets. Adjustments to the scene and modifications to the player controller. The game now has a prefab finish line, and the UI already includes play and restart buttons, making it a functional prototype.
+   Inclusion of the game's start screen and inclusion of the textmesh pro assets. Adjustments to the scene and modifications to the player controller. The game now has a prefab finish line, and the UI already includes play and restart buttons, making it a functional prototype. (Module 20 submission - Creating a mobile game: First controls - NOTE: The activity began on February 4th and ended on February 9th.).
 
 <img src="https://github.com/user-attachments/assets/c7c00ae8-0f79-49bc-8fad-657aeae4c429" width="180" title="Start screen and Obstacle bump"/>
 <img src="https://github.com/user-attachments/assets/1a998572-2635-429d-9dfb-5b4b9a787b53" width="180" title="Finish Line Prefab and restart Game Screen"/>
@@ -46,7 +46,8 @@
 
 ### Refactoring Item Systems & New PowerUp Implementation
 
-   In this update, I refactored the player scripts and item collection system, introducing four new power-ups: Invincibility, Speed Up, Height Change (like a float or fly), and Area Coin Collection. To support these mechanics, I implemented the DOTween plugin, created new materials, and developed all necessary scripts, prefabs, and VFX—including obstacle explosion logic and specific interactions for each power-up.
+   In this update, I refactored the player scripts and item collection system, introducing four new power-ups: Invincibility, Speed Up, Height Change (like a float or fly), and Area Coin Collection. To support these mechanics, I implemented the DOTween plugin, created new materials, and developed all necessary scripts, prefabs, and VFX—including obstacle explosion logic and specific interactions for each power-up.(Module 21 submission - Creating a mobile game: PowerUps - NOTE: The activity began on February 10th and ended on February 12th.).
+
 
 <img src="https://github.com/user-attachments/assets/99d220ca-1c7a-408d-846d-de10a60e1a26" width="180" title="Power Up Height Pill"/>
 <img src="https://github.com/user-attachments/assets/dbc6d76c-f8a4-4367-a19a-2b7f1e8dae3b" width="180" title="Power Up Area Coin Collection Pill"/>
