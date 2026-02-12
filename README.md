@@ -46,7 +46,7 @@
 
 ### Refactoring Item Systems & New PowerUp Implementation
 
-   In this update, I refactored the player scripts and item collection system, introducing four new power-ups: Invincibility, Speed Up, Height Change (like a float or fly), and Area Coin Collection. To support these mechanics, I implemented the DOTween plugin, created new materials, and developed all necessary scripts, prefabs, and VFX—including obstacle explosion logic and specific interactions for each power-up.(Module 21 submission - Creating a mobile game: PowerUps - NOTE: The activity began on February 10th and ended on February 12th.).
+   In this update, I refactored the player scripts and item collection system, introducing four new power-ups: Invincibility, Speed Up, Height Change (like a float or fly), and Area Coin Collection. To support these mechanics, I implemented the DOTween plugin, created new materials, and developed all necessary scripts, prefabs, and VFX—including obstacle explosion logic (Not working yet, but will be implemented soon: when the player gets the invincibility power-up, they can trigger an explosion animation on the obstacle.) and specific interactions for each power-up.(Module 21 submission - Creating a mobile game: PowerUps - NOTE: The activity began on February 10th and ended on February 12th.).
 
 
 <img src="https://github.com/user-attachments/assets/99d220ca-1c7a-408d-846d-de10a60e1a26" width="180" title="Power Up Height Pill"/>
