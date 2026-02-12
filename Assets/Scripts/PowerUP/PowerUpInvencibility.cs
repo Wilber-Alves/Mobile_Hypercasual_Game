@@ -5,7 +5,7 @@ public class PowerUpInvencibility : PowerUpBase
     protected override void StartPowerUp()
     {
         base.StartPowerUp();
-        PlayerController.Instance.SetPowerUpText("Invencibility!");
+        PlayerController.Instance.SetPowerUpText("Invincibility!");
         PlayerController.Instance.SetInvencibility(true);
     }
     protected override void EndPowerUp()
