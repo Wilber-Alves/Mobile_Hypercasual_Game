@@ -5046,7 +5046,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9545679021f0bd4a999ce0e905169fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  compareTag: Player
+  compareTag: CoinCollector
   pSystem: {fileID: 787392644010668354}
   audioSource: {fileID: 0}
   timeToHide: 0.5
