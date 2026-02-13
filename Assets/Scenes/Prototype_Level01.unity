@@ -9082,6 +9082,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e95c9d6e59e7a7d4c8121efaa705e0ea, type: 3}
+--- !u!114 &1924979106 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6550413043822854111, guid: 89e20167823a30d459856414377997d1, type: 3}
+  m_PrefabInstance: {fileID: 1486909069}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd5d79f0cf0ff7a42a5f62dd949917f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1934691787
 GameObject:
   m_ObjectHideFlags: 0
@@ -9244,6 +9255,7 @@ MonoBehaviour:
   invencibility: 0
   uiTextPowerUp: {fileID: 540141309}
   coinCollector: {fileID: 685743230}
+  animatorManager: {fileID: 1924979106}
 --- !u!114 &1934691795
 MonoBehaviour:
   m_ObjectHideFlags: 0
