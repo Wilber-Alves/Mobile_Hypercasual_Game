@@ -57,4 +57,8 @@
 
 ### 3D animation
 
-Adjustments to the visual effects of coins and power-ups. Adjustments to the 3D model shader. Inclusion of the player's 3D model package.
+Adjustments to the visual effects of coins and power-ups. Adjustments to the 3D model shader. Inclusion of the player's 3D model package. Implementation of an animator manager for adjusting character animations.
+
+<img src="https://github.com/user-attachments/assets/20840148-ea52-442d-9c96-2f3233db29dc" width="180" title="Idle Animation"/>
+<img src="https://github.com/user-attachments/assets/9ca1f33d-b918-4363-983a-813fee98972b" width="180" title="Run Animation"/>
+<img src="https://github.com/user-attachments/assets/87d7d9c8-d072-4ecc-a72c-af054860891e" width="180" title=" Death Animation"/>
