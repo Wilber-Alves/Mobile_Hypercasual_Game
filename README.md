@@ -53,3 +53,8 @@
 <img src="https://github.com/user-attachments/assets/dbc6d76c-f8a4-4367-a19a-2b7f1e8dae3b" width="180" title="Power Up Area Coin Collection Pill"/>
 <img src="https://github.com/user-attachments/assets/956ea4cb-e1a5-460f-99df-bca95b2d9e3b" width="180" title="Power Ups Invincibility and Speed Up"/>
 
+## February, 13th, 2026
+
+### 3D animation
+
+Adjustments to the visual effects of coins and power-ups. Adjustments to the 3D model shader. Inclusion of the player's 3D model package.
