@@ -12,7 +12,7 @@ public class PlayerController : Singleton<PlayerController>
     public Transform target;
     public float lerpSpeed = 1.0f;
 
-    public float speed = 1.0f;
+    public float speed = 5.0f;
 
     public string tagToCheckObstacle = "Obstacle";
     public string tagToCheckFinishLine = "FinishLine";
@@ -27,11 +27,15 @@ public class PlayerController : Singleton<PlayerController>
     [Header("Coin Setup")]
     public GameObject coinCollector;
 
+    [Header("Animation")]
+    public AnimatorManager animatorManager;
+
     // privates
     private Vector3 _position;
     private bool _canRun;
     private float _currentSpeed;
     private Vector3 _startPosition;
+    private float _baseSpeedToAnimation = 5.0f;
 
 
     private void Start()
@@ -56,7 +60,11 @@ public class PlayerController : Singleton<PlayerController>
     {
         if (collision.transform.tag == tagToCheckObstacle)
         {
-            if (!invencibility) EndGame();
+            if (!invencibility)
+            {
+                MoveBack();
+                EndGame(AnimatorManager.AnimationType.Dead);
+            }
         }
 
         if (collision.transform.tag == tagToCheckFinishLine)
@@ -66,10 +74,16 @@ public class PlayerController : Singleton<PlayerController>
 
     }
 
-    private void EndGame()
+    private void MoveBack()
+    {
+        transform.DOMoveZ(-1, 0.2f).SetRelative();
+    }
+
+    private void EndGame(AnimatorManager.AnimationType animationType = AnimatorManager.AnimationType.Idle)
     {
         _canRun = false;
         endScreen.SetActive(true);
+        animatorManager.Play(animationType);
         Debug.Log("Game Over!");
 
     }
@@ -77,6 +91,7 @@ public class PlayerController : Singleton<PlayerController>
     public void StartToRun()
     {
         _canRun = true;
+        animatorManager.Play(AnimatorManager.AnimationType.Run, _currentSpeed / _baseSpeedToAnimation);
 
     }
     #region POWER UP
