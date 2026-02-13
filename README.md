@@ -57,7 +57,7 @@
 
 ### 3D animation
 
-Adjustments to the visual effects of coins and power-ups. Adjustments to the 3D model shader. Inclusion of the player's 3D model package. Implementation of an animator manager for adjusting character animations. Now the player displays animations for Idle, Run, and when hitting an obstacle without being invincible, the death animation is triggered. A small adjustment to the camera was made to better observe the animations.
+Adjustments to the visual effects of coins and power-ups. Adjustments to the 3D model shader. Inclusion of the player's 3D model package. Implementation of an animator manager for adjusting character animations. Now the player displays animations for Idle, Run, and when hitting an obstacle without being invincible, the death animation is triggered. A small adjustment to the camera was made to better observe the animations.(Module 22 submission - Creating a mobile game: 3D animations - NOTE: The activity began on February 12th and ended on February 13th.).
 
 <img src="https://github.com/user-attachments/assets/20840148-ea52-442d-9c96-2f3233db29dc" width="180" title="Idle Animation"/>
 <img src="https://github.com/user-attachments/assets/9ca1f33d-b918-4363-983a-813fee98972b" width="180" title="Run Animation"/>
