@@ -62,3 +62,12 @@ Adjustments to the visual effects of coins and power-ups. Adjustments to the 3D 
 <img src="https://github.com/user-attachments/assets/20840148-ea52-442d-9c96-2f3233db29dc" width="180" title="Idle Animation"/>
 <img src="https://github.com/user-attachments/assets/9ca1f33d-b918-4363-983a-813fee98972b" width="180" title="Run Animation"/>
 <img src="https://github.com/user-attachments/assets/87d7d9c8-d072-4ecc-a72c-af054860891e" width="180" title=" Death Animation"/>
+
+## February, 14th, 2026
+
+### Level Design
+
+In this stage, a Level Manager was created for randomizing scenery pieces, colors, and themes. To achieve this, 20 different initial scenery pieces were created to generate future levels. Some obstacles can move vertically, and adjustments will be made to allow horizontal movement, adding more challenges to the game.
+
+<img src="https://github.com/user-attachments/assets/ac27157f-21d2-406d-bed1-d8f3b2a710ce" width="400" title="Prefabs Pieces for randomization - Isometric Projection View"/>
+<img src="https://github.com/user-attachments/assets/51a34d42-7ec9-488d-b945-abd45050493d" width="445" title="Prefabs Pieces for randomization - Perspective Projection"/>
