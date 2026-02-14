@@ -31,6 +31,7 @@ public class PlayerController : Singleton<PlayerController>
     public AnimatorManager animatorManager;
 
     // privates
+    
     private Vector3 _position;
     private bool _canRun;
     private float _currentSpeed;
@@ -42,7 +43,6 @@ public class PlayerController : Singleton<PlayerController>
     {
         _startPosition = transform.position;
         ResetSpeed();
-
     }
     void Update()
     {
@@ -85,14 +85,12 @@ public class PlayerController : Singleton<PlayerController>
         endScreen.SetActive(true);
         animatorManager.Play(animationType);
         Debug.Log("Game Over!");
-
     }
 
     public void StartToRun()
     {
         _canRun = true;
         animatorManager.Play(AnimatorManager.AnimationType.Run, _currentSpeed / _baseSpeedToAnimation);
-
     }
     #region POWER UP
     public void SetPowerUpText(string s)
@@ -114,8 +112,7 @@ public class PlayerController : Singleton<PlayerController>
     }
 
     public void ChangeHeight(float amount, float duration, float animationDuration, Ease ease)
-    { 
-        
+    {  
         /*var p = transform.position;
         p.y = _startPosition.y + amount;
         transform.position = p;*/
@@ -123,8 +120,6 @@ public class PlayerController : Singleton<PlayerController>
         transform.DOMoveY(_startPosition.y + amount,
         animationDuration).SetEase(ease);//.OnComplete(ResetHeight);a
         Invoke(nameof(ResetHeight), duration);
-
-
     }
 
     public void ResetHeight()
