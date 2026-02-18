@@ -71,3 +71,11 @@ In this stage, a Level Manager was created for randomizing scenery pieces, color
 
 <img src="https://github.com/user-attachments/assets/ac27157f-21d2-406d-bed1-d8f3b2a710ce" width="400" title="Prefabs Pieces for randomization - Isometric Projection View"/>
 <img src="https://github.com/user-attachments/assets/51a34d42-7ec9-488d-b945-abd45050493d" width="445" title="Prefabs Pieces for randomization - Perspective Projection"/>
+
+
+## February, 18th, 2026
+
+###  procedural generation system - LevelManager
+
+In this stage, a procedural generation system driven by a LevelManager that utilizes a list of scenario prefabs to build levels dynamically was created. The system ensures structural consistency by using fixed prefabs for the beginning and end of each level, while applying randomization logic solely to the remaining pieces in the sequence. To facilitate this, I developed the LevelPieceBase class, which acts as a container for positional variables, leveraging specific startpiece and endpiece GameObjects within each prefab to precisely calculate and adjust connections for seamless environment assembly.
+
