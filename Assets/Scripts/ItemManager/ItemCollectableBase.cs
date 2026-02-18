@@ -18,7 +18,7 @@ public class ItemCollectableBase : MonoBehaviour
     private void Awake()
     {
         
-        if (pSystem != null) pSystem.transform.SetParent(null);
+        //if (pSystem != null) pSystem.transform.SetParent(null);
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -31,14 +31,16 @@ public class ItemCollectableBase : MonoBehaviour
 
     protected virtual void Collect()
     {
-        
-        if (GetComponent<SpriteRenderer>() != null) GetComponent<SpriteRenderer>().enabled = false;
-        if (GetComponent<Collider>() != null) GetComponent<Collider>().enabled = false;
 
         if (graphicItem != null) graphicItem.SetActive(false);
+        if (GetComponent<Collider>() != null) GetComponent<Collider>().enabled = false;
 
+        if (pSystem != null)
+        {
+            pSystem.transform.SetParent(null);
+            pSystem.Play();
+        }
 
-        if (pSystem != null) pSystem.Play();
         if (audioSource != null && audioSource.clip != null)
         {
             audioSource.spatialBlend = 0f;
