@@ -6,6 +6,8 @@ public class LevelManager : MonoBehaviour
 {
     // Public variables
 
+    public ArtManager.ArtType artType;
+
     [Header("Level Container")]
     public Transform container;
 
@@ -26,7 +28,7 @@ public class LevelManager : MonoBehaviour
     private GameObject _currentLevel;
 
     [Header("Spawned Pieces")]
-    private List<LevelPieceBase> _spawnedPieces;
+    private List<LevelPieceBase> _spawnedPieces = new List<LevelPieceBase>();
 
 
     private void Awake()
@@ -64,12 +66,11 @@ public class LevelManager : MonoBehaviour
     private void ResetLevelIndex()
     {
         _index = 0;
-    
     }
 
     private void CreateLevelPieces()
     { 
-        _spawnedPieces = new List<LevelPieceBase>();
+        ClearSpawnedPieces();
 
         SpawnSpecificPiece(startPiecePrefab);
 
@@ -78,9 +79,16 @@ public class LevelManager : MonoBehaviour
             var randomPiece = levelPieces[Random.Range(0, levelPieces.Count)];
             SpawnSpecificPiece(randomPiece);
         }
-
         SpawnSpecificPiece(endPiecePrefab);
+    }
 
+private void ClearSpawnedPieces()
+    {
+        for(int i = _spawnedPieces.Count - 1; i >= 0; i--)
+        {
+            Destroy(_spawnedPieces[i].gameObject);
+        }
+        _spawnedPieces.Clear();
     }
 
     private void SpawnSpecificPiece(LevelPieceBase piecePrefab)
@@ -115,6 +123,11 @@ public class LevelManager : MonoBehaviour
 
             Vector3 offset = spawnedPiece.transform.position - spawnedPiece.startPiece.position;
             spawnedPiece.transform.position += offset;
+        }
+
+        foreach (var p in spawnedPiece.GetComponentsInChildren<ArtPiece>())
+        {
+            p.ChangePiece(ArtManager.Instance.GetSetupByType(artType).gameObject);
         }
 
         _spawnedPieces.Add(spawnedPiece);
