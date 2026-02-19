@@ -79,3 +79,10 @@ In this stage, a Level Manager was created for randomizing scenery pieces, color
 
 In this stage, a procedural generation system driven by a LevelManager that utilizes a list of scenario prefabs to build levels dynamically was created. The system ensures structural consistency by using fixed prefabs for the beginning and end of each level, while applying randomization logic solely to the remaining pieces in the sequence. To facilitate this, I developed the LevelPieceBase class, which acts as a container for positional variables, leveraging specific startpiece and endpiece GameObjects within each prefab to precisely calculate and adjust connections for seamless environment assembly.
 
+## February, 19th, 2026
+
+###  Level Manager Update - Arts
+
+Updated the environment workflow by creating and organizing several scenery prefabs. This update includes core assets for the castle (main structures and towers), crystals for cave environments, and trees for forest areas, along with a default cube prefab to streamline level assembly.
+
+
