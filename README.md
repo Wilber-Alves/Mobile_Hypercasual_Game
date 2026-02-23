@@ -85,7 +85,7 @@ In this stage, a procedural generation system driven by a LevelManager that util
 
 Updated the environment workflow by creating and organizing several scenery prefabs. This update includes core assets for the castle (main structures and towers), crystals for cave environments, and trees for forest areas, along with a default cube prefab to streamline level assembly.
 
-## February, 19th, 2026
+## February, 22th, 2026
 
 ###  Level Manager Update - New Decorative Prefabs and Explosion VFX
 
