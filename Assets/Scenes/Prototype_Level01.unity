@@ -1506,7 +1506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c55096cfab2a6146b2373488c904f4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  artType: 3
+  artType: 2
   container: {fileID: 234418120}
   levels:
   - {fileID: 6553117563002920165, guid: 128281370139b634695bb134e7fb7d3b, type: 3}
