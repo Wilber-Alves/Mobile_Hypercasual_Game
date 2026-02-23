@@ -3,8 +3,9 @@ using UnityEngine;
 public class ItemCollectableAnimator : MonoBehaviour
 {
 
-    [Tooltip("The speed at which the coin bobs up and down.")]
+    [Tooltip("The speed at which the coin move.")]
     public float bounceSpeed = 2.0f;
+
     [Tooltip("The total height of the bobbing motion.")]
     public float bounceAmount = 0.5f;
 
