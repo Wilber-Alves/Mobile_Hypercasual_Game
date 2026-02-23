@@ -31,7 +31,7 @@ public class LevelManager : MonoBehaviour
     private List<LevelPieceBase> _spawnedPieces = new List<LevelPieceBase>();
 
 
-    private void Awake()
+    private void Start()
     {
         //SpawnNextLevel();
         CreateLevelPieces();
