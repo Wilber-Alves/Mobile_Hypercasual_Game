@@ -2,42 +2,39 @@ using UnityEngine;
 
 public class VFXHandler : MonoBehaviour
 {
+    [SerializeField] GameObject _mainExplosionChunk;
+    [SerializeField] int _minChunks = 8;
+    [SerializeField] int _maxChunks = 12;
+    [SerializeField] float _explosionForce = 500.0f;
 
-    [SerializeField, Tooltip("Prefab to spawn when hit and destroyed.")]
-    GameObject _mainExplosionChunk;
-     [SerializeField, Tooltip("Min explosion chunks to spawn.")]
-    int _minChunks = 5;
-    [SerializeField, Tooltip("Max explosion chunks to spawn.")]
-    int _maxChunks = 10;
-    [SerializeField, Tooltip("Force of explosion.")]
-    float _explosionForce = 1500.0f;
-
-    public void SpawnExplosion()
+    // now, when the Player collides with the obstacle, we call this method to spawn the chunks and destroy the obstacle
+    public void OnBreak(Vector3 impactPoint)
     {
-        // spawn a random number of the main chunks
-        int rand = Random.Range(_minChunks, _maxChunks);
-        if (_mainExplosionChunk)
+        if (_mainExplosionChunk != null)
         {
+            int rand = Random.Range(_minChunks, _maxChunks);
             for (int i = 0; i < rand; i++)
             {
-                SpawnSubObject(_mainExplosionChunk);
-
+                SpawnChunk(impactPoint);
             }
         }
-    }
 
-    public void OnBreak()
-    {
-        SpawnExplosion();
+        // destroy the original object after spawning the chunks
         Destroy(gameObject);
     }
-    public void SpawnSubObject(GameObject prefab)
+
+    private void SpawnChunk(Vector3 center)
     {
-        Vector3 pos = transform.position + Random.onUnitSphere * 0.8f;
-        GameObject newObj = Instantiate(prefab, pos, Quaternion.identity);
+        // create a random position around the impact point to spawn the chunk
+        Vector3 spawnPos = center + (Vector3.forward * 0.5f) + Random.insideUnitSphere * 0.5f;
+        GameObject newObj = Instantiate(_mainExplosionChunk, spawnPos, Random.rotation);
 
         Rigidbody rb = newObj.GetComponent<Rigidbody>();
-        if (rb != null) rb.AddExplosionForce(_explosionForce, transform.position, 1.0f);
+        if (rb != null)
+        {
+            // the force is applied from the center of the explosion to the chunk, so it will fly away from the explosion
+            rb.AddExplosionForce(_explosionForce, center, 3.0f);
+        }
 
         Destroy(newObj, 2.0f);
     }
