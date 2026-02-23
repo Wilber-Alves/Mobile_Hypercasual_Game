@@ -58,12 +58,28 @@ public class PlayerController : Singleton<PlayerController>
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.transform.tag == tagToCheckObstacle)
+        if (collision.transform.CompareTag(tagToCheckObstacle))
         {
             if (!invencibility)
             {
                 MoveBack();
                 EndGame(AnimatorManager.AnimationType.Dead);
+            }
+            else
+            {
+                // get vfx handler and call break
+                VFXHandler vfx = collision.gameObject.GetComponent<VFXHandler>();
+                if (vfx != null)
+                {
+                    // the point  of impact = player position + 1 meter in front of the player
+                    Vector3 impactPos = transform.position + (transform.forward * 2.0f);
+                    vfx.OnBreak(impactPos);
+                }
+                else
+                {
+                    // Fallback cause the object doesn't have a vfx handler, just destroy it
+                    Destroy(collision.gameObject);
+                }
             }
         }
 
