@@ -5065,4 +5065,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bounceSpeed: 2
   bounceAmount: 0.15
+  slideSpeed: 0
+  slideAmount: 0
   rotationSpeed: 180
