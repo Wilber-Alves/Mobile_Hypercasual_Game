@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 491263843329901772}
   - component: {fileID: 4339969574713474949}
   - component: {fileID: 585258433124347610}
+  - component: {fileID: 780649483024025239}
   m_Layer: 0
   m_Name: PFB_Obstacle
   m_TagString: Obstacle
@@ -108,3 +109,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &780649483024025239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9105720883788518972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8743376bbd10b4147a21cb52eb0ee623, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _mainExplosionChunk: {fileID: 7249021825891211782, guid: 4dae882f6197c7d4d9a85be289dde173, type: 3}
+  _minChunks: 30
+  _maxChunks: 30
+  _explosionForce: 500
