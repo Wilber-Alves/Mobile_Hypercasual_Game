@@ -85,4 +85,8 @@ In this stage, a procedural generation system driven by a LevelManager that util
 
 Updated the environment workflow by creating and organizing several scenery prefabs. This update includes core assets for the castle (main structures and towers), crystals for cave environments, and trees for forest areas, along with a default cube prefab to streamline level assembly.
 
+## February, 19th, 2026
 
+###  Level Manager Update - New Decorative Prefabs and Explosion VFX
+
+Update to the PFB_debris prefab. Creation of a new material for debris. Update to the game's piece prefabs, including new obstacle animation scripts. Creation of a script for secondary obstacle animation. In addition, a new visual effect has been included along with the VFXHandler.sc script. Now, when touching an obstacle while invincible, the character passes through the obstacle and it disappears, resulting in an explosion of obstacle fragments.
