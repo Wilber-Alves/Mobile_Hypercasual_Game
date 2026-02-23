@@ -731,6 +731,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bounceSpeed: 2
   bounceAmount: 2
+  slideSpeed: 0
+  slideAmount: 0
   rotationSpeed: 0
 --- !u!4 &8378600732074778421 stripped
 Transform:
@@ -1064,6 +1066,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bounceSpeed: 2
   bounceAmount: 2
+  slideSpeed: 0
+  slideAmount: 0
   rotationSpeed: 0
 --- !u!4 &6106032522984627387 stripped
 Transform:
@@ -1149,6 +1153,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bounceSpeed: 2
   bounceAmount: 2
+  slideSpeed: 0
+  slideAmount: 0
   rotationSpeed: 0
 --- !u!4 &6228953986156179233 stripped
 Transform:
@@ -1296,6 +1302,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bounceSpeed: 2
   bounceAmount: 2
+  slideSpeed: 0
+  slideAmount: 0
   rotationSpeed: 0
 --- !u!4 &6674714878307016652 stripped
 Transform:
@@ -1510,6 +1518,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bounceSpeed: 2
   bounceAmount: 2
+  slideSpeed: 0
+  slideAmount: 0
   rotationSpeed: 0
 --- !u!1001 &5220734049306560059
 PrefabInstance:
@@ -1657,6 +1667,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bounceSpeed: 2
   bounceAmount: 2
+  slideSpeed: 0
+  slideAmount: 0
   rotationSpeed: 0
 --- !u!1001 &5795187165182294646
 PrefabInstance:
@@ -1923,6 +1935,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bounceSpeed: 2
   bounceAmount: 2
+  slideSpeed: 0
+  slideAmount: 0
   rotationSpeed: 0
 --- !u!4 &4401493206052225043 stripped
 Transform:
@@ -2013,6 +2027,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bounceSpeed: 2
   bounceAmount: 2
+  slideSpeed: 0
+  slideAmount: 0
   rotationSpeed: 0
 --- !u!1001 &7572688016080859095
 PrefabInstance:
@@ -2155,6 +2171,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bounceSpeed: 2
   bounceAmount: 2
+  slideSpeed: 0
+  slideAmount: 0
   rotationSpeed: 0
 --- !u!4 &1160057029712184779 stripped
 Transform:

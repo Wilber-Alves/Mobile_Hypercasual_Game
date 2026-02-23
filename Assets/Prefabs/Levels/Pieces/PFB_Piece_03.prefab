@@ -975,6 +975,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bounceSpeed: 2
   bounceAmount: 2
+  slideSpeed: 0
+  slideAmount: 0
   rotationSpeed: 0
 --- !u!4 &8479284691505876341 stripped
 Transform:
@@ -1060,6 +1062,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bounceSpeed: 2
   bounceAmount: 2
+  slideSpeed: 0
+  slideAmount: 0
   rotationSpeed: 0
 --- !u!4 &8444706019383949912 stripped
 Transform:
