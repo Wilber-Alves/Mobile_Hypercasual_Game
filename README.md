@@ -85,14 +85,26 @@ In this stage, a procedural generation system driven by a LevelManager that util
 
 Updated the environment workflow by creating and organizing several scenery prefabs. This update includes core assets for the castle (main structures and towers), crystals for cave environments, and trees for forest areas, along with a default cube prefab to streamline level assembly.
 
+<img src="https://github.com/user-attachments/assets/eb962e95-80b2-4460-971c-d2545a08e9ed" width="180" title="PFB_Castle"/>
+<img src="https://github.com/user-attachments/assets/f88f5fa6-253f-4716-8936-1fc636044ba6" width="180" title="PFB_Woods"/>
+<img src="https://github.com/user-attachments/assets/ead60957-2525-45d9-bfa6-581490c9893a" width="180" title="PFB_Cave"/>
+
 ## February, 22th, 2026
 
 ###  Level Manager Update - New Decorative Prefabs and Explosion VFX
 
 Update to the PFB_debris prefab. Creation of a new material for debris. Update to the game's piece prefabs, including new obstacle animation scripts. Creation of a script for secondary obstacle animation. In addition, a new visual effect has been included along with the VFXHandler.sc script. Now, when touching an obstacle while invincible, the character passes through the obstacle and it disappears, resulting in an explosion of obstacle fragments.
 
+<img src="https://github.com/user-attachments/assets/062e9ca6-e3f3-44e4-9c7a-7d01536f86a6" width="180" title="Explosion VFX"/>
+<img src="https://github.com/user-attachments/assets/fa69034c-cf8b-4d1f-967a-6fc72e273ee9" width="400" title="PFB_Debris_VFX"/>
+
 ## March, 02th, 2026
 
 ###  Color Manager - Randomization of the colors in the scenery for the game phases.
 
-New materials have been added to the floor and cubes of the level. These materials were accessed using the new color_manager.sc script to randomize the level colors according to the castle, cave, forest, and default themes.(Module 23 submission - Creating a mobile game: Level Manager - NOTE: The activity began on February 14th and ended on March 02nd.).
+New materials have been added to the floor and cubes of the level. These materials were accessed using the new color_manager.sc script to randomize the level colors according to the castle, cave, woods, and default themes.(Module 23 submission - Creating a mobile game: Level Manager - NOTE: The activity began on February 14th and ended on March 02nd.).
+
+<img src="https://github.com/user-attachments/assets/1d769e84-52c4-4f54-97c8-827a11879d3e" width="180" title="Default Level Color Randomized"/>
+<img src="https://github.com/user-attachments/assets/9ab81356-8fad-49eb-9255-41dedbe8dc34" width="180" title="Castle Level Color Randomized"/>
+<img src="https://github.com/user-attachments/assets/de6b7fe0-c1ed-4cc5-bfa0-847a45ac5bab" width="180" title="Woods Level Color Randomized"/>
+<img src="https://github.com/user-attachments/assets/502a3367-9ece-4ee8-8b93-8807e92eb1cc" width="180" title="Cave Level Color Randomized"/>
