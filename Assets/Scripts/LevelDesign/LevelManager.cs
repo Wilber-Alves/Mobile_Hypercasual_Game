@@ -30,7 +30,6 @@ public class LevelManager : MonoBehaviour
     [Header("Spawned Pieces")]
     private List<LevelPieceBase> _spawnedPieces = new List<LevelPieceBase>();
 
-
     private void Start()
     {
         //SpawnNextLevel();
@@ -46,7 +45,7 @@ public class LevelManager : MonoBehaviour
     }
 
     private void SpawnNextLevel()
-    { 
+    {
         if (_currentLevel != null)
         {
             Destroy(_currentLevel);
@@ -69,7 +68,10 @@ public class LevelManager : MonoBehaviour
     }
 
     private void CreateLevelPieces()
-    { 
+    {
+        var types = (ArtManager.ArtType[])System.Enum.GetValues(typeof(ArtManager.ArtType));
+        artType = types[Random.Range(0, types.Length)];
+
         ClearSpawnedPieces();
 
         SpawnSpecificPiece(startPiecePrefab);
@@ -79,10 +81,13 @@ public class LevelManager : MonoBehaviour
             var randomPiece = levelPieces[Random.Range(0, levelPieces.Count)];
             SpawnSpecificPiece(randomPiece);
         }
+
         SpawnSpecificPiece(endPiecePrefab);
+        
+        Color_Manager.Instance.ChangeColorByType(artType);
     }
 
-private void ClearSpawnedPieces()
+    private void ClearSpawnedPieces()
     {
         for(int i = _spawnedPieces.Count - 1; i >= 0; i--)
         {
