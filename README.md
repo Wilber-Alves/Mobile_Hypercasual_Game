@@ -90,3 +90,9 @@ Updated the environment workflow by creating and organizing several scenery pref
 ###  Level Manager Update - New Decorative Prefabs and Explosion VFX
 
 Update to the PFB_debris prefab. Creation of a new material for debris. Update to the game's piece prefabs, including new obstacle animation scripts. Creation of a script for secondary obstacle animation. In addition, a new visual effect has been included along with the VFXHandler.sc script. Now, when touching an obstacle while invincible, the character passes through the obstacle and it disappears, resulting in an explosion of obstacle fragments.
+
+## March, 02th, 2026
+
+###  Color Manager - Randomization of the colors in the scenery for the game phases.
+
+New materials have been added to the floor and cubes of the level. These materials were accessed using the new color_manager.sc script to randomize the level colors according to the castle, cave, forest, and default themes.(Module 23 submission - Creating a mobile game: Level Manager - NOTE: The activity began on February 14th and ended on March 02nd.).
