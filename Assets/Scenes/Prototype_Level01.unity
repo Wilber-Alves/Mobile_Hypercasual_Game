@@ -188,7 +188,6 @@ Transform:
   m_Children:
   - {fileID: 2875638698805621729}
   - {fileID: 122444241}
-  - {fileID: 1261410010}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &366526374
@@ -1571,7 +1570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c55096cfab2a6146b2373488c904f4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  artType: 3
+  artType: 0
   container: {fileID: 234418120}
   levels:
   - {fileID: 6553117563002920165, guid: 128281370139b634695bb134e7fb7d3b, type: 3}
@@ -1600,6 +1599,9 @@ MonoBehaviour:
   pieceNumber: 20
   startPiecePrefab: {fileID: -1614939755036368233, guid: b6eb31702ff1c5d43b5eabaaf132062f, type: 3}
   endPiecePrefab: {fileID: -1614939755036368233, guid: b5644c4589b7abb4c9bd6e091ab671fd, type: 3}
+  scaleDuration: 0.5
+  scaleTimeBetweenPieces: 0.1
+  scaleEase: 27
   _index: 0
 --- !u!4 &1261410010
 Transform:
@@ -1614,7 +1616,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 234418120}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1373937246
 GameObject:
@@ -2574,6 +2576,7 @@ SceneRoots:
   - {fileID: 637766926}
   - {fileID: 191566799}
   - {fileID: 234418120}
+  - {fileID: 1261410010}
   - {fileID: 1373937248}
   - {fileID: 1215683248}
   - {fileID: 1013478779}
