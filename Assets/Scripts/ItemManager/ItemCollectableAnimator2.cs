@@ -9,11 +9,11 @@ public class ItemCollectableAnimator2 : MonoBehaviour
     [Tooltip("The total height of the bobbing motion.")]
     public float slideAmount = 0.5f;
     
-    private Vector3 startPosition;
+    private Vector3 startLocalPosition;
 
     void Start()
     {
-        startPosition = transform.position;
+        startLocalPosition = transform.localPosition;
     }
 
     void Update()
@@ -24,7 +24,7 @@ public class ItemCollectableAnimator2 : MonoBehaviour
     private void Slide()
     {
         float xOffset = Mathf.Sin(Time.time * slideSpeed) * slideAmount;
-        transform.position = new Vector3(startPosition.x + xOffset, startPosition.y, startPosition.z);
+        transform.position = new Vector3(startLocalPosition.x + xOffset, startLocalPosition.y, startLocalPosition.z);
     }
 
 }
