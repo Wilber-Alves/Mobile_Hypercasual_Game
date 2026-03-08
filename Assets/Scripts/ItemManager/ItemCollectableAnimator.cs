@@ -12,11 +12,11 @@ public class ItemCollectableAnimator : MonoBehaviour
     [Tooltip("The speed at which the coin rotates on the Y-axis (degrees per second).")]
     public float rotationSpeed = 180.0f;
 
-    private Vector3 startPosition;
+    private Vector3 startLocalPosition;
 
     void Start()
     {
-        startPosition = transform.position;
+        startLocalPosition = transform.position;
     }
 
     void Update()
@@ -29,7 +29,7 @@ public class ItemCollectableAnimator : MonoBehaviour
     private void Floating()
     {
         float yOffset = Mathf.Sin(Time.time * bounceSpeed) * bounceAmount;
-        transform.position = new Vector3(startPosition.x, startPosition.y + yOffset, startPosition.z);
+        transform.position = new Vector3(startLocalPosition.x, startLocalPosition.y + yOffset, startLocalPosition.z);
     }
 
     private void Rotation()
