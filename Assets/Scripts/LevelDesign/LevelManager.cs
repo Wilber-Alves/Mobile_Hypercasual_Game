@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using DG.Tweening;
 
 public class LevelManager : MonoBehaviour
 {
@@ -22,6 +23,11 @@ public class LevelManager : MonoBehaviour
     public LevelPieceBase startPiecePrefab;
     public LevelPieceBase endPiecePrefab;
 
+    [Header("Animation")]
+    public float scaleDuration = 0.5f;
+    public float scaleTimeBetweenPieces = 0.1f;
+    public Ease scaleEase = Ease.OutBack;
+
     // Private variables
 
     [SerializeField] private int _index;
@@ -29,6 +35,8 @@ public class LevelManager : MonoBehaviour
 
     [Header("Spawned Pieces")]
     private List<LevelPieceBase> _spawnedPieces = new List<LevelPieceBase>();
+
+
 
     private void Start()
     {
@@ -83,13 +91,35 @@ public class LevelManager : MonoBehaviour
         }
 
         SpawnSpecificPiece(endPiecePrefab);
-        
+
         Color_Manager.Instance.ChangeColorByType(artType);
+       
+        StartCoroutine(ScalePiecesByTime());
     }
+    IEnumerator ScalePiecesByTime()
+    {
+
+        yield return new WaitForEndOfFrame();
+
+        foreach (var p in _spawnedPieces)
+        { 
+            p.transform.localScale = Vector3.zero;
+        }
+
+        yield return null;
+
+        for (int i = 0; i < _spawnedPieces.Count; i++)
+        { 
+            _spawnedPieces[i].transform.DOScale(1, scaleDuration).SetEase(scaleEase);
+            yield return new WaitForSeconds(scaleTimeBetweenPieces);
+        }
+
+    }
+
 
     private void ClearSpawnedPieces()
     {
-        for(int i = _spawnedPieces.Count - 1; i >= 0; i--)
+        for (int i = _spawnedPieces.Count - 1; i >= 0; i--)
         {
             Destroy(_spawnedPieces[i].gameObject);
         }
@@ -100,7 +130,7 @@ public class LevelManager : MonoBehaviour
     {
         //var piece = levelPieces[Random.Range(0, levelPieces.Count)];
         //var spawnedPiece = Instantiate(piece, container);
-        
+
         LevelPieceBase spawnedPiece;
 
         if (_spawnedPieces.Count > 0)
@@ -137,7 +167,5 @@ public class LevelManager : MonoBehaviour
 
         _spawnedPieces.Add(spawnedPiece);
 
-    }
-
-
+    }  
 }
