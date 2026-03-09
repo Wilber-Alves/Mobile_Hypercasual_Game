@@ -95,6 +95,7 @@ public class LevelManager : MonoBehaviour
         Color_Manager.Instance.ChangeColorByType(artType);
        
         StartCoroutine(ScalePiecesByTime());
+
     }
     IEnumerator ScalePiecesByTime()
     {
@@ -114,8 +115,8 @@ public class LevelManager : MonoBehaviour
             yield return new WaitForSeconds(scaleTimeBetweenPieces);
         }
 
+        CoinsAnimationManager.Instance.StartAnimations();
     }
-
 
     private void ClearSpawnedPieces()
     {
