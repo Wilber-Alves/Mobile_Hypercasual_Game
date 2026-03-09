@@ -98,13 +98,19 @@ Update to the PFB_debris prefab. Creation of a new material for debris. Update t
 <img src="https://github.com/user-attachments/assets/062e9ca6-e3f3-44e4-9c7a-7d01536f86a6" width="180" title="Explosion VFX"/>
 <img src="https://github.com/user-attachments/assets/fa69034c-cf8b-4d1f-967a-6fc72e273ee9" width="400" title="PFB_Debris_VFX"/>
 
-## March, 02th, 2026
+## March, 2nd, 2026
 
 ###  Color Manager - Randomization of the colors in the scenery for the game phases.
 
-New materials have been added to the floor and cubes of the level. These materials were accessed using the new color_manager.sc script to randomize the level colors according to the castle, cave, woods, and default themes.(Module 23 submission - Creating a mobile game: Level Manager - NOTE: The activity began on February 14th and ended on March 02nd.).
+New materials have been added to the floor and cubes of the level. These materials were accessed using the new color_manager.sc script to randomize the level colors according to the castle, cave, woods, and default themes.(Module 23 submission - Creating a mobile game: Level Manager - NOTE: The activity began on February 14th and ended on March 2nd.).
 
 <img src="https://github.com/user-attachments/assets/1d769e84-52c4-4f54-97c8-827a11879d3e" width="180" title="Default Level Color Randomized"/>
 <img src="https://github.com/user-attachments/assets/9ab81356-8fad-49eb-9255-41dedbe8dc34" width="180" title="Castle Level Color Randomized"/>
 <img src="https://github.com/user-attachments/assets/de6b7fe0-c1ed-4cc5-bfa0-847a45ac5bab" width="180" title="Woods Level Color Randomized"/>
 <img src="https://github.com/user-attachments/assets/502a3367-9ece-4ee8-8b93-8807e92eb1cc" width="180" title="Cave Level Color Randomized"/>
+
+## March, 07th, 2026
+
+###  Polishing the game - Lerp and Scale Scenery Pieces.
+
+Creation of scripts (MovimentHelper.sc) to assist in the movement of items in the scene, such as enemies or scene objects. Adjustment of negative prefab values. All were adjusted to positive values ​​to avoid console errors. To improve the functioning of coroutines, the positions of the items that carry the moviment item collector were converted to local positions. Creation of coroutines to scale and animate with Dotweening in the generation of new scene pieces in the level menager script.
