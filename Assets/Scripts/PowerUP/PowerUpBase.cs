@@ -2,26 +2,16 @@ using UnityEngine;
 
 public class PowerUpBase : ItemCollectableBase
 {
-    [Header("Power Up Settings")]
-    public float duration = 5f;
+   public float duration = 5f;
 
-    protected override void OnCollect()
-    {
-   
-        StartPowerUp();
-    }
+   protected override void OnCollect()
+   {
+      StartPowerUp();
+      Destroy(gameObject);
+   }
 
     protected virtual void StartPowerUp()
     {
-        Debug.Log("Start Power Up");
-       
-        Invoke(nameof(EndPowerUp), duration);
-    }
 
-    protected virtual void EndPowerUp()
-    {
-        Debug.Log("End Power Up");
-   
-        Destroy(gameObject);
     }
 }
