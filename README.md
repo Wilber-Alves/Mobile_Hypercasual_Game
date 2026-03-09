@@ -114,3 +114,15 @@ New materials have been added to the floor and cubes of the level. These materia
 ###  Polishing the game - Lerp and Scale Scenery Pieces.
 
 Creation of scripts (MovimentHelper.sc) to assist in the movement of items in the scene, such as enemies or scene objects. Adjustment of negative prefab values. All were adjusted to positive values ​​to avoid console errors. To improve the functioning of coroutines, the positions of the items that carry the moviment item collector were converted to local positions. Creation of coroutines to scale and animate with Dotweening in the generation of new scene pieces in the level menager script.
+
+## March, 08th, 2026
+
+###  Polishing the game - Tweens and Color Changes.
+
+Update to the color change scripts - The scenario received color change scripts to start white and acquire color after the game begins.
+
+Warning: The Prefab folder seems to have changed location. This commit reported many new items, even though these prefabs were already present in the repository. It's possible the folder was moved unintentionally and these files are being copied twice.
+
+In this stage, many scripts were created to polish the game, such as a change color (to change the color of the levels at the beginning of the game), a bounce helper to create animations when the player touches a power-up, and to concentrate the power-up logic in a single script called PowerUp Manager.
+
+Note: The game is presenting some bugs, such as the color change of the white levels at the beginning of the second game; it doesn't revert to the original color effect, everything remains white. And it's presenting problems when we use the power-up to increase height; if, after the effect ends, we touch another power-up, we end up 0.5 meters off the ground on the Y-axis, as if we were floating.
