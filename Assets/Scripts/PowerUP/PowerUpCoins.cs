@@ -4,14 +4,14 @@ using UnityEngine;
     {
         [Header("Coin Collector")]
         public float sizeAmount = 7;
-        protected override void StartPowerUp()
+    protected override void StartPowerUp()
+    {
+        base.StartPowerUp();
+        var manager = PlayerController.Instance.GetComponent<PowerUpManager>();
+
+        if (manager != null)
         {
-            base.StartPowerUp();
-            PlayerController.Instance.ChangeCoinCollectorSize(sizeAmount);
-        }
-        protected override void EndPowerUp()
-        {
-            base.EndPowerUp();
-            PlayerController.Instance.ChangeCoinCollectorSize(1);
+            manager.StartCoinCollector(sizeAmount, duration);
         }
     }
+}
