@@ -7,14 +7,15 @@ TagManager:
   - Obstacle
   - FinishLine
   - CoinCollector
+  - Item
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
+  - Item
   - 
   - 
   - 
