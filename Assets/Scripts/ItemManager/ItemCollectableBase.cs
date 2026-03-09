@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public class ItemCollectableBase : MonoBehaviour
 {
+    [HideInInspector] public Vector3 originalScale;
+
     public string compareTag = "Player";
 
     [Header("Particles")]
@@ -13,12 +15,18 @@ public class ItemCollectableBase : MonoBehaviour
     public AudioSource audioSource;
 
     public float timeToHide = 0.5f;
+
     public GameObject graphicItem;
 
     private void Awake()
     {
-        
+        originalScale = transform.localScale;
         //if (pSystem != null) pSystem.transform.SetParent(null);
+    }
+
+    private void Start()
+    {
+        CoinsAnimationManager.Instance.RegisterCoin(this);
     }
 
     private void OnTriggerEnter(Collider collision)
@@ -31,6 +39,10 @@ public class ItemCollectableBase : MonoBehaviour
 
     protected virtual void Collect()
     {
+        var col = GetComponent<Collider>();
+        if (col != null) col.enabled = false;
+
+        PlayerController.Instance.Bounce();
 
         if (graphicItem != null) graphicItem.SetActive(false);
         if (GetComponent<Collider>() != null) GetComponent<Collider>().enabled = false;
