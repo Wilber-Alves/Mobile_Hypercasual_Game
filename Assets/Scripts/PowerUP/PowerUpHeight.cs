@@ -1,6 +1,6 @@
-using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class PowerUpHeight : PowerUpBase
 {
@@ -10,14 +10,13 @@ public class PowerUpHeight : PowerUpBase
     public DG.Tweening.Ease ease = DG.Tweening.Ease.OutBack;
     protected override void StartPowerUp()
     {
-        base.StartPowerUp();
-        PlayerController.Instance.ChangeHeight(amountHeight, duration, animationDuration, ease);
-    }
+        
+        var manager = PlayerController.Instance.GetComponent<PowerUpManager>();
 
-    protected override void EndPowerUp()
-    {
-        base.EndPowerUp();
-        PlayerController.Instance.ResetHeight();
+        if (manager != null)
+        {
+            manager.StartHeight(amountHeight, duration, animationDuration, ease);
+        }
     }
 }
 
