@@ -1,20 +1,21 @@
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 
 public class PowerUpInvencibility : PowerUpBase
 {
     protected override void StartPowerUp()
     {
-        base.StartPowerUp();
-        PlayerController.Instance.SetPowerUpText("Invincibility!");
-        PlayerController.Instance.SetInvencibility(true);
-    }
-    protected override void EndPowerUp()
-    {
-        base.EndPowerUp();
-        PlayerController.Instance.SetInvencibility(false);
-        PlayerController.Instance.SetPowerUpText("");
+        
+        var manager = PlayerController.Instance.GetComponent<PowerUpManager>();
+
+        if (manager != null)
+        {
+           
+            manager.StartInvincibility(duration);
+        }
     }
 }
+
 
 
 
