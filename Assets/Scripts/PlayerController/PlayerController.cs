@@ -8,6 +8,8 @@ using TMPro;
 public class PlayerController : Singleton<PlayerController>
 {
     // publics
+    public Vector3 startPosition;
+
     [Header("Lerp")]
     public Transform target;
     public float lerpSpeed = 1.0f;
@@ -30,29 +32,41 @@ public class PlayerController : Singleton<PlayerController>
     [Header("Animation")]
     public AnimatorManager animatorManager;
 
+    [SerializeField] private BounceHelper _bounceHelper;
+
     // privates
-    
+
     private Vector3 _position;
     private bool _canRun;
     private float _currentSpeed;
-    private Vector3 _startPosition;
     private float _baseSpeedToAnimation = 5.0f;
 
 
     private void Start()
     {
-        _startPosition = transform.position;
+        startPosition = transform.position;
         ResetSpeed();
+    }
+
+    public void Bounce()
+    {
+        if (_bounceHelper != null)
+        {
+            _bounceHelper.Bounce();
+        }
+        else
+        {
+            Debug.LogWarning("BounceHelper não atribuído no Inspector do PlayerController!");
+        }
     }
     void Update()
     {
         if (!_canRun) return;
 
-        _position = transform.position;
-        _position.y = transform.position.y;
-        _position.z = transform.position.z;
+        Vector3 targetPos = new Vector3(target.position.x, transform.position.y, transform.position.z);
 
-        transform.position = Vector3.Lerp(transform.position, _position, lerpSpeed * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position, targetPos, lerpSpeed * Time.deltaTime);
+
         transform.Translate(Vector3.forward * _currentSpeed * Time.deltaTime);
     }
 
@@ -125,22 +139,6 @@ public class PlayerController : Singleton<PlayerController>
     public void SetInvencibility(bool b)
     {
         invencibility = b;
-    }
-
-    public void ChangeHeight(float amount, float duration, float animationDuration, Ease ease)
-    {  
-        /*var p = transform.position;
-        p.y = _startPosition.y + amount;
-        transform.position = p;*/
-
-        transform.DOMoveY(_startPosition.y + amount,
-        animationDuration).SetEase(ease);//.OnComplete(ResetHeight);a
-        Invoke(nameof(ResetHeight), duration);
-    }
-
-    public void ResetHeight()
-    {
-        transform.DOMoveY(_startPosition.y, 0.1f);
     }
 
     public void ChangeCoinCollectorSize(float amount)
