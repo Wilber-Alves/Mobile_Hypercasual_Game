@@ -126,3 +126,10 @@ Warning: The Prefab folder seems to have changed location. This commit reported 
 In this stage, many scripts were created to polish the game, such as a change color (to change the color of the levels at the beginning of the game), a bounce helper to create animations when the player touches a power-up, and to concentrate the power-up logic in a single script called PowerUp Manager.
 
 Note: The game is presenting some bugs, such as the color change of the white levels at the beginning of the second game; it doesn't revert to the original color effect, everything remains white. And it's presenting problems when we use the power-up to increase height; if, after the effect ends, we touch another power-up, we end up 0.5 meters off the ground on the Y-axis, as if we were floating.
+
+## March, 15th, 2026
+
+### WARNING!!
+
+A movement of prefab files between the prefabs and resource folders resulted in duplicate files, preventing the game from running. Furthermore, changes to the game's tweens and background color variations were not implemented correctly, resulting in numerous bugs. The game had to revert to the March 7th version and restart all polishing from scratch.
+
