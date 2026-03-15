@@ -144,4 +144,4 @@ Game Polishes:
 * Other level generation tweens have been added, such as the wave effect when assembling the stage pieces and generating coins, as well as the start of the stage changing from blank to the original stage color.
 * A new scaling effect has been added when using the invincibility PowerUP, because when breaking obstacles, they scale (expand) and generate a FadeOut effect with the disappearance and reappearance of the VFX particle effect.
 
-
+(Module 24 submission - Creating a mobile game: Polishing the game - NOTE: The activity began on March 7th and ended on March 15th.).
