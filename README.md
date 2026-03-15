@@ -133,3 +133,15 @@ Note: The game is presenting some bugs, such as the color change of the white le
 
 A movement of prefab files between the prefabs and resource folders resulted in duplicate files, preventing the game from running. Furthermore, changes to the game's tweens and background color variations were not implemented correctly, resulting in numerous bugs. The game had to revert to the March 7th version and restart all polishing from scratch.
 
+###  Polishing the game (Again!)- Tweens and Color Changes.
+
+Now, the procedural generation and feedback systems of the runner game was optmized. I corrected local space positioning issues to ensure obstacles remain correctly aligned with moving level pieces. The player's lifecycle management was improved by implementing an initialization method within the Singleton pattern, ensuring a smooth 'scale-up' spawn effect and consistent resets between matches. Finally, I enhanced the VFX impact system by synchronizing DOTween-based scale expansion and material transparency (fade-out) with the physics-driven explosion chunks, creating a much more fluid and impactful destruction sequence when the player is invincible.
+
+Game Polishes:
+
+* Now, when starting the game, the main character scales from 0 to 1, growing on the screen when the game starts.
+* When collecting Coins, the main character performs a scaling bounce.
+* Other level generation tweens have been added, such as the wave effect when assembling the stage pieces and generating coins, as well as the start of the stage changing from blank to the original stage color.
+* A new scaling effect has been added when using the invincibility PowerUP, because when breaking obstacles, they scale (expand) and generate a FadeOut effect with the disappearance and reappearance of the VFX particle effect.
+
+
