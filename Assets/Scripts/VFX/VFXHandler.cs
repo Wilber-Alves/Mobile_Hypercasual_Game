@@ -1,38 +1,73 @@
+using DG.Tweening;
 using UnityEngine;
 
 public class VFXHandler : MonoBehaviour
 {
+    [Header("Explosion Settings")]
     [SerializeField] GameObject _mainExplosionChunk;
-    [SerializeField] int _minChunks = 8;
-    [SerializeField] int _maxChunks = 12;
     [SerializeField] float _explosionForce = 500.0f;
+    [SerializeField] MeshRenderer _meshRenderer;
 
-    // now, when the Player collides with the obstacle, we call this method to spawn the chunks and destroy the obstacle
+
+    [Header("Animation Timings")]
+    [Tooltip("How long the obstacle takes to expand and fade away.")]
+    public float breakDuration = 0.2f;
+
+    [Tooltip("The delay before spawning chunks (0 = immediate). Should be shorter than Break Duration.")]
+    public float particleSpawnDelay = 0.05f;
+
+    [Header("Visual Effects")]
+    [Tooltip("Scale multiplier for the expansion effect (e.g., 1.5 = 50% larger).")]
+    public float expandMultiplier = 1.5f;
+
+    [Tooltip("The color the block flashes before disappearing (usually White).")]
+    public Color flashColor = Color.blue;
+
+    private bool _isBreaking = false;
+
     public void OnBreak(Vector3 impactPoint)
     {
-        if (_mainExplosionChunk != null)
+        if (_isBreaking) return;
+        _isBreaking = true;
+
+        Vector3 targetScale = transform.localScale * expandMultiplier;
+        transform.DOScale(targetScale, breakDuration).SetEase(Ease.OutQuad);
+
+        if (_meshRenderer != null)
         {
-            int rand = Random.Range(_minChunks, _maxChunks);
-            for (int i = 0; i < rand; i++)
-            {
-                SpawnChunk(impactPoint);
-            }
+
+            _meshRenderer.material.DOColor(flashColor, breakDuration * 0.5f);
+
+            _meshRenderer.material.DOFade(0, breakDuration).SetEase(Ease.InQuad);
         }
 
-        // destroy the original object after spawning the chunks
-        Destroy(gameObject);
+        DOVirtual.DelayedCall(particleSpawnDelay, () =>
+        {
+            SpawnExplosion(impactPoint);
+        });
+
+        Destroy(gameObject, breakDuration);
+    }
+
+    private void SpawnExplosion(Vector3 center)
+    {
+        if (_mainExplosionChunk == null) return;
+
+        int rand = Random.Range(25, 30);
+        for (int i = 0; i < rand; i++)
+        {
+            SpawnChunk(center);
+        }
     }
 
     private void SpawnChunk(Vector3 center)
     {
-        // create a random position around the impact point to spawn the chunk
         Vector3 spawnPos = center + (Vector3.forward * 0.5f) + Random.insideUnitSphere * 0.5f;
         GameObject newObj = Instantiate(_mainExplosionChunk, spawnPos, Random.rotation);
 
         Rigidbody rb = newObj.GetComponent<Rigidbody>();
         if (rb != null)
         {
-            // the force is applied from the center of the explosion to the chunk, so it will fly away from the explosion
             rb.AddExplosionForce(_explosionForce, center, 3.0f);
         }
 
