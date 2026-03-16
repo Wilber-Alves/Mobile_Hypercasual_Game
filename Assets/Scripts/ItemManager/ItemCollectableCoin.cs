@@ -1,7 +1,7 @@
 using UnityEngine;
+using EDGEE.Core.Singleton;
 using System.Collections.Generic;
 using System.Collections;
-
 
 public class ItemCollectableCoin : ItemCollectableBase
 {
@@ -23,7 +23,7 @@ public class ItemCollectableCoin : ItemCollectableBase
         base.OnCollect();
         collider.enabled = false;
         collect = true;
-        //PlayerController.Instance.Bounce();
+        PlayerController.Instance.Bounce();
     }
     private void Update()
     {
