@@ -30,8 +30,11 @@ public class PlayerController : Singleton<PlayerController>
     [Header("Animation")]
     public AnimatorManager animatorManager;
 
+    [SerializeField] private BounceHelper _bounceHelper;
+
+
     // privates
-    
+
     private Vector3 _position;
     private bool _canRun;
     private float _currentSpeed;
@@ -43,6 +46,15 @@ public class PlayerController : Singleton<PlayerController>
     {
         _startPosition = transform.position;
         ResetSpeed();
+
+        transform.localScale = Vector3.zero;
+        transform.DOScale(1f, 0.5f).SetEase(Ease.OutBack).SetDelay(0.2f);
+    }
+
+    public void Bounce()
+    {
+        if(_bounceHelper != null)
+        _bounceHelper.Bounce();
     }
     void Update()
     {
