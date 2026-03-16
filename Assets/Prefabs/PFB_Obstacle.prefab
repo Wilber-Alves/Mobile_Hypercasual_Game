@@ -125,3 +125,4 @@ MonoBehaviour:
   _minChunks: 30
   _maxChunks: 30
   _explosionForce: 500
+  _meshRenderer: {fileID: 4339969574713474949}
