@@ -1352,7 +1352,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0
+      scalar: 5
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -4418,7 +4418,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 4
     type: 0
     collisionMode: 0
@@ -4426,7 +4426,29 @@ ParticleSystem:
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 1
-    m_Planes: []
+    m_Planes:
+    - {fileID: 4784746723266333111, guid: 723d767eb88e7aa46b7fef329a2cf5ba, type: 3}
+    - {fileID: 1716348871891385431, guid: f2e62935b569e624e9c425d3e15e3023, type: 3}
+    - {fileID: 5010348968247477789, guid: 82deb05ee922c5d4ab24e0a272ddda98, type: 3}
+    - {fileID: 2481200788229628518, guid: 6024c478ecb41414daf02084b47e5cba, type: 3}
+    - {fileID: 419722648162915629, guid: ba4beda66a4b54a41b8c3f67d4bd5665, type: 3}
+    - {fileID: 756393849477055919, guid: de470a20abf907d4d83cf679c41cdfa5, type: 3}
+    - {fileID: 1986040626126980273, guid: 363f12f1c524b2e4f9e30a7791455b75, type: 3}
+    - {fileID: 110367838242779699, guid: 575c621cdb385474c8fcf078a2f3c120, type: 3}
+    - {fileID: 1881553520489510743, guid: 2334ad5a050a39d498186db1adc49de1, type: 3}
+    - {fileID: 3149620078041089410, guid: e201d436071e34348b3641d5993eb73d, type: 3}
+    - {fileID: 2779363409428230483, guid: 179537153067def488a857088de41d4e, type: 3}
+    - {fileID: 9047837281183890802, guid: 87cebda491c1735468634a6d190ba855, type: 3}
+    - {fileID: 6168815643464120369, guid: 3658601b8f5d0b94da136eff3e7cc86b, type: 3}
+    - {fileID: 8261362262988488969, guid: 1a85426ca6a33b7488716ad84618126e, type: 3}
+    - {fileID: 9085730213783035505, guid: c15f050f17fb47549ab98e955b99a5ce, type: 3}
+    - {fileID: 4256900379558866008, guid: 25b7afd7369a222418826a27584194c9, type: 3}
+    - {fileID: 7324317982327674114, guid: 484a2f6e44485f545b885875162ee7d3, type: 3}
+    - {fileID: 7929408819259101180, guid: dea3fd943db656f47b3b834f5886d0f4, type: 3}
+    - {fileID: 8602035087061978523, guid: 51230cc694c092b4389d9994661da5c2, type: 3}
+    - {fileID: 3194474978820842747, guid: 0b4f807f2668c31408b3706a574511cd, type: 3}
+    - {fileID: 3194474978820842747, guid: b5644c4589b7abb4c9bd6e091ab671fd, type: 3}
+    - {fileID: 3194474978820842747, guid: b6eb31702ff1c5d43b5eabaaf132062f, type: 3}
     m_Dampen:
       serializedVersion: 2
       minMaxState: 0
@@ -5642,6 +5664,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5746047279604084386}
   - component: {fileID: 9194602837201062870}
+  - component: {fileID: -5174345942696137021}
   m_Layer: 0
   m_Name: PFB_Debris_VFX
   m_TagString: Untagged
@@ -5703,6 +5726,27 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!65 &-5174345942696137021
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7249021825891211782}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 1
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7580137252023753935
 GameObject:
   m_ObjectHideFlags: 0
