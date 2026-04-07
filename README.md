@@ -150,6 +150,7 @@ NOTE: 4 PFB_Pieces are corrupted because the SpeedUP PowerUp was lost in the 08t
 
 ## April, 07th, 2026
 
-### Adding VFX and Particles - adding a trail renderer
+### Adding VFX and Particles - adding a trail renderer, line renderer and new particles
 
-The project is resuming, as it was paused due to university and postgraduate assignments. Balancing work, postgraduate studies, lesson preparation, homework, university classes, course classes, and submitting assignments and exams has been quite difficult, but we will move forward. Including trails as visual effects on the character
+The project is resuming, as it was paused due to university and postgraduate assignments. Balancing work, postgraduate studies, lesson preparation, homework, university classes, course classes, and submitting assignments and exams has been quite difficult, but we will move forward. Including trails as visual effects on the character.
+Line renderers were added to the game's PFB_pieces to create polygonal geometric figures with color gradients. Additionally, a death particle with a ghost-like appearance was included, and physics were incorporated into the debris particles, so they bounce off the ground when generated and explode high up in the air, directly into the player's line of sight!
