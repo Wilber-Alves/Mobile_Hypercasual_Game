@@ -21,6 +21,7 @@ public class PlayerController : Singleton<PlayerController>
 
     public bool invencibility = false;
 
+
     [Header("PowerUp Texts")]
     public TextMeshPro uiTextPowerUp;
 
@@ -29,6 +30,9 @@ public class PlayerController : Singleton<PlayerController>
 
     [Header("Animation")]
     public AnimatorManager animatorManager;
+
+    [Header("Death Particle")]
+    public ParticleSystem vFX_Death_Particle;
 
     [SerializeField] private BounceHelper _bounceHelper;
 
@@ -112,6 +116,7 @@ public class PlayerController : Singleton<PlayerController>
         _canRun = false;
         endScreen.SetActive(true);
         animatorManager.Play(animationType);
+        if(vFX_Death_Particle != null)vFX_Death_Particle.Play();
         Debug.Log("Game Over!");
     }
 
