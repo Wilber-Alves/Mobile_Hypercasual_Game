@@ -147,3 +147,9 @@ Game Polishes:
 NOTE: 4 PFB_Pieces are corrupted because the SpeedUP PowerUp was lost in the 08th March commit. This issue needs to be fixed in the future.
 
 (Module 24 submission - Creating a mobile game: Polishing the game - NOTE: The activity began on March 7th and ended on March 15th.).
+
+## April, 07th, 2026
+
+### Adding VFX and Particles - adding a trail renderer
+
+The project is resuming, as it was paused due to university and postgraduate assignments. Balancing work, postgraduate studies, lesson preparation, homework, university classes, course classes, and submitting assignments and exams has been quite difficult, but we will move forward. Including trails as visual effects on the character
