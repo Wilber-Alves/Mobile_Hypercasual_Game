@@ -2688,6 +2688,8 @@ MonoBehaviour:
   coinCollector: {fileID: 685743230}
   animatorManager: {fileID: 1924979106}
   vFX_Death_Particle: {fileID: 382212349}
+  limit: 4
+  limitvector: {x: -4, y: 4}
   _bounceHelper: {fileID: 1934691796}
 --- !u!114 &1934691795
 MonoBehaviour:
