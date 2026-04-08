@@ -154,3 +154,9 @@ NOTE: 4 PFB_Pieces are corrupted because the SpeedUP PowerUp was lost in the 08t
 
 The project is resuming, as it was paused due to university and postgraduate assignments. Balancing work, postgraduate studies, lesson preparation, homework, university classes, course classes, and submitting assignments and exams has been quite difficult, but we will move forward. Including trails as visual effects on the character.
 Line renderers were added to the game's PFB_pieces to create polygonal geometric figures with color gradients. Additionally, a death particle with a ghost-like appearance was included, and physics were incorporated into the debris particles, so they bounce off the ground when generated and explode high up in the air, directly into the player's line of sight!
+
+<img src="https://github.com/user-attachments/assets/3e48252e-a27a-469d-afb1-6642ee8e0a2a" width="180" title="Line and Trail renderer VFX"/>
+<img src="https://github.com/user-attachments/assets/d5633306-0d9c-4b45-a635-6dea739b1863" width="180" title="Debris Particle VFX"/>
+<img src="https://github.com/user-attachments/assets/7e05dc00-4091-4983-8cba-28bfad466de1" width="180" title="Death particle VFX"/>
+
+(Module 25 submission - Creating a mobile game: Adding VFX and Particles - NOTE: The activity began and ended on April 7th.).
