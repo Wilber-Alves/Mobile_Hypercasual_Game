@@ -160,3 +160,9 @@ Line renderers were added to the game's PFB_pieces to create polygonal geometric
 <img src="https://github.com/user-attachments/assets/7e05dc00-4091-4983-8cba-28bfad466de1" width="180" title="Death particle VFX"/>
 
 (Module 25 submission - Creating a mobile game: Adding VFX and Particles - NOTE: The activity began and ended on April 7th.).
+
+## April, 10th, 2026
+
+### UI Animation - Animating buttons, images and text
+
+In this step, a dark UI asset, created by Giniel Villacote from the Unity Asset Store, was downloaded to develop the game's UI, and an asset called NaughtyAttributes, created by Denis Rizov, was downloaded to optimize and edit the inspector. To begin the process of creating the game's UI and its animations, a new scene was created, as well as new scripts such as ButtonScaler.sc and ScreenBase for UI animation.
