@@ -5,7 +5,6 @@ using UnityEngine.UI;
 using UnityEngine;
 using DG.Tweening;
 
-
 public class ButtonScaler : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public float finalScale = 1.1f; // The scale to which the button will grow
