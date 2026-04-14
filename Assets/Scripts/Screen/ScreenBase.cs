@@ -1,8 +1,10 @@
-using UnityEngine;
-using System.Collections.Generic;
-using System.Collections;
+using DG.Tweening;
 using NaughtyAttributes;
-using DG.Tweening;  
+using System.Collections;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
+using UnityEngine;
+using UnityEngine.UI;
 
 namespace Screens
 {
@@ -39,8 +41,15 @@ namespace Screens
 
         public List<Transform> listOfObjects;
 
+        public List<Typer> listOfPhrases;
+
+
+        public Image uiBackground;
 
         public bool startHided = false;
+
+
+
 
 
         [Header("Animation")]
@@ -57,7 +66,7 @@ namespace Screens
 
 
         [Button]
-        protected virtual void Show()
+        public virtual void Show()
         {
             ShowObjects();
             Debug.Log("Show");
@@ -65,7 +74,7 @@ namespace Screens
         }
 
         [Button]
-        protected virtual void Hide()
+        public virtual void Hide()
         {
             HideObjects();
             Debug.Log("Hide");
@@ -75,7 +84,8 @@ namespace Screens
         private void HideObjects()
         { 
         
-        listOfObjects.ForEach(x => x.gameObject.SetActive(false)); // hide all objects in the list
+            listOfObjects.ForEach(x => x.gameObject.SetActive(false)); // hide all objects in the list
+            uiBackground.enabled = false; // hide the background image
 
         }
 
@@ -92,7 +102,20 @@ namespace Screens
 
             }
 
+            Invoke(nameof(StartType), delayBetweenObjects * listOfObjects.Count); // start typing after all objects are shown and animated
+            uiBackground.enabled = false; // hide the background image
         }
+
+        private void StartType()
+        {
+            for (int i = 0; i < listOfPhrases.Count; i++)
+            { 
+                listOfPhrases[i].StartType(); // start typing the phrase
+            }
+
+
+        }
+
 
         private void ForceShowObjects()
         {
