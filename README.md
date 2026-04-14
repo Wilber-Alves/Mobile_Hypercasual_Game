@@ -166,3 +166,9 @@ Line renderers were added to the game's PFB_pieces to create polygonal geometric
 ### UI Animation - Animating buttons, images and text
 
 In this step, a dark UI asset, created by Giniel Villacote from the Unity Asset Store, was downloaded to develop the game's UI, and an asset called NaughtyAttributes, created by Denis Rizov, was downloaded to optimize and edit the inspector. To begin the process of creating the game's UI and its animations, a new scene was created, as well as new scripts such as ButtonScaler.sc and ScreenBase for UI animation.
+
+## April, 13 and 14th, 2026
+
+### UI Animation - Animating a screen transition and text animations
+
+In this stage, a series of scripts were created to assist in animating the text in the UI, where the text was generated similarly to a person typing (Typer.sc), and for animating the transition between UI screens with button activation. For this, scripts titled screenHelper and screenManager were created, allowing this screen transition. In total, only the initial menu and shop screens are working.
