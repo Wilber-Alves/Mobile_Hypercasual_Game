@@ -172,3 +172,12 @@ In this step, a dark UI asset, created by Giniel Villacote from the Unity Asset 
 ### UI Animation - Animating a screen transition and text animations
 
 In this stage, a series of scripts were created to assist in animating the text in the UI, where the text was generated similarly to a person typing (Typer.sc), and for animating the transition between UI screens with button activation. For this, scripts titled screenHelper and screenManager were created, allowing this screen transition. In total, only the initial menu and shop screens are working.
+
+## April, 14th, 2026
+
+### UI Animation -  Adding particles to the UI
+
+Scene transitions have been made for some of the game's UI windows. Now, the game contains a UI with the main screen and several screens for Facebook, Shop, settings, etc. The list of panels can be viewed below: Main Menu Panel / Facebook Panel / Ranking Panel / Shop Panel / Settings Panel / Profile Panel. Particles have also been added to the UI when the start game button is pressed.
+
+(Module 26 submission - Creating a mobile game: UI Animation - NOTE: The activity began on April 10th and ended on April 14th.).
+
