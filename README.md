@@ -183,7 +183,7 @@ Scene transitions have been made for some of the game's UI windows. Now, the gam
 
 ## April, 18th and 19th, 2026
 
-### Unity Extra - Unity Extra - working with extensions and randomization of list items
+### Unity Extra - Unity Extra - working with extensions, randomization of list items, basic unity editor, create Menus in the toolbar.
 
 In this stage, I studied how to create randomization and extensions for future use in games. I also created a new script called EDGEEUtil.sc for using extensions, and in it I am including functions that can be accessed as extensions, optimizing the code and production of games, thus avoiding rewriting entire blocks of code for each new game.
 
@@ -192,3 +192,5 @@ A new script for studying the function of the Unity editor was created, using a 
 Updates were made to the project, creating a separate scene to test the button creation functions in the Unity inspector. The new scene was named Prototype_Unity_Extra and allows access to the GameObject Editor to create objects in the scene, using buttons and adding colors to them for highlighting. It was also learned how to include new windows in Unity.
 
 A window called EDGEE was added, which includes two buttons to instantiate a sphere or a cube in the scene. They can also be created with shortcuts, such as CTRL + SHIFT + ALT + S (to create a sphere) and CTRL + SHIFT + ALT + K (to create a cube).
+
+(Module 27 submission - Creating a mobile game: Unity Extra - NOTE: The activity began on April 18th and ended on April 19th.).
