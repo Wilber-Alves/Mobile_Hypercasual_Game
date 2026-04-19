@@ -3,12 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 namespace Screens
 {
     public class ScreenManager : Singleton<ScreenManager>
     {
         public List<ScreenBase> screenBases;
+        public List<GameObject> gameObjects;
 
         public ScreenType startScreen = ScreenType.Main_Menu_Panel;
 
@@ -16,6 +18,9 @@ namespace Screens
 
         private void Start()
         {
+            gameObjects.GetRandom();
+            screenBases.GetRandom();
+
             Hide();
             ShowByType(startScreen);
         }
