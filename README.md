@@ -190,3 +190,5 @@ In this stage, I studied how to create randomization and extensions for future u
 A new script for studying the function of the Unity editor was created, using a script with car variables, such as gears and speed, as well as a script to act as an editor for the car, using its own libraries such as UnityEditor and functions such as OnInspectorGUI and EditorGUILayout classes, including variable fields, labels, and help boxes. (New scripts: CarEditor.cs and Car.cs). 
 
 Updates were made to the project, creating a separate scene to test the button creation functions in the Unity inspector. The new scene was named Prototype_Unity_Extra and allows access to the GameObject Editor to create objects in the scene, using buttons and adding colors to them for highlighting. It was also learned how to include new windows in Unity.
+
+A window called EDGEE was added, which includes two buttons to instantiate a sphere or a cube in the scene. They can also be created with shortcuts, such as CTRL + SHIFT + ALT + S (to create a sphere) and CTRL + SHIFT + ALT + K (to create a cube).
