@@ -8,6 +8,9 @@ public class CarEditor : Editor
     override public void OnInspectorGUI()
     {
         Car myTarget = (Car)target;
+
+        myTarget.carPrefab = (GameObject)EditorGUILayout.ObjectField("Car Prefab", myTarget.carPrefab, typeof(GameObject), true);
+
         myTarget.speed = EditorGUILayout.IntField("Speed", myTarget.speed);
         myTarget.gear = EditorGUILayout.IntField("Gear", myTarget.gear);
 
@@ -22,5 +25,16 @@ public class CarEditor : Editor
             EditorGUILayout.HelpBox("The total speed is quite high! " +
                 "Make sure to adjust the speed and gear accordingly.", MessageType.Warning);
         }
+        GUI.color = Color.white;
+        if (GUILayout.Button("Update Car"))
+        {
+            myTarget.CreateCar();
+        }
+        GUI.color = Color.orange;
+        if (GUILayout.Button("Update Car"))
+        {
+            myTarget.CreateCar();
+        }
+
     }
 }
