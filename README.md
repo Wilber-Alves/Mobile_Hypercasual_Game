@@ -186,3 +186,5 @@ Scene transitions have been made for some of the game's UI windows. Now, the gam
 ### Unity Extra - Unity Extra - working with extensions and randomization of list items
 
 In this stage, I studied how to create randomization and extensions for future use in games. I also created a new script called EDGEEUtil.sc for using extensions, and in it I am including functions that can be accessed as extensions, optimizing the code and production of games, thus avoiding rewriting entire blocks of code for each new game.
+
+A new script for studying the function of the Unity editor was created, using a script with car variables, such as gears and speed, as well as a script to act as an editor for the car, using its own libraries such as UnityEditor and functions such as OnInspectorGUI and EditorGUILayout classes, including variable fields, labels, and help boxes. (New scripts: CarEditor.cs and Car.cs). 
