@@ -181,3 +181,8 @@ Scene transitions have been made for some of the game's UI windows. Now, the gam
 
 (Module 26 submission - Creating a mobile game: UI Animation - NOTE: The activity began on April 10th and ended on April 14th.).
 
+## April, 18th and 19th, 2026
+
+### Unity Extra - Unity Extra - working with extensions and randomization of list items
+
+In this stage, I studied how to create randomization and extensions for future use in games. I also created a new script called EDGEEUtil.sc for using extensions, and in it I am including functions that can be accessed as extensions, optimizing the code and production of games, thus avoiding rewriting entire blocks of code for each new game.
